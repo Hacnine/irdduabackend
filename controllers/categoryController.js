@@ -1,6 +1,6 @@
 import db from '../models/database.js';
 
-export const getAllCategories = (tableName) => (req, res) => {
+export const getAllDatas = (tableName) => (req, res) => {
   const sql = `SELECT * FROM ${tableName}`;
   db.all(sql, [], (err, rows) => {
     if (err) {
