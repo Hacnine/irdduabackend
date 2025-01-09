@@ -4,7 +4,8 @@
   "main": "main.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon main.js"
+    "dev": "nodemon main.js",
+    "postinstall": "npm rebuild sqlite3"
   },
   "author": "",
   "license": "ISC",
@@ -17,5 +18,8 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
-  }
+  },
+ "engines": {
+  "node": ">=18.x <=20.x"
+}
 }
