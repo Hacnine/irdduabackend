@@ -12,14 +12,18 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.1",
     "dotenv": "^16.4.7",
+    "express": "^4.21.1",
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "@types/express": "^5.0.2",
+    "@types/node": "^22.15.21",
+    "nodemon": "^3.1.9",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
   },
- "engines": {
-  "node": ">=18.x <=20.x"
-}
+  "engines": {
+    "node": ">=18.x <=20.x"
+  }
 }

@@ -12,3 +12,40 @@ export const getAllDatas = (tableName) => (req, res) => {
     res.json(rows);
   });
 };
+
+
+
+export const getSubcategoriesByCategoryId = (req, res) => {
+  const { categoryid } = req.query; // expecting ?categoryid=1 from frontend
+
+  if (!categoryid) {
+    return res.status(400).json({ error: "Missing 'categoryid' query parameter" });
+  }
+
+  const sql = `SELECT * FROM subcategories WHERE cat_id = ?`;
+  db.all(sql, [categoryid], (err, rows) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json(rows);
+  });
+};
+
+export const getDuasByCategory = (req, res) => {
+  const { cat_id } = req.query;
+
+  if (!cat_id) {
+    return res.status(400).json({ error: "cat_id is required" });
+  }
+
+  const sql = `SELECT * FROM dua WHERE cat_id = ?`;
+
+  db.all(sql, [cat_id], (err, rows) => {
+    if (err) {
+      return res.status(500).json({ error: err.message });
+    }
+
+    res.json(rows);
+  });
+};
