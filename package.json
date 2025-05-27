@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon main.js",
+    "start": "node main.js",
     "postinstall": "npm rebuild sqlite3"
   },
   "author": "",
@@ -17,11 +18,7 @@
     "sqlite3": "^5.1.7"
   },
   "devDependencies": {
-    "@types/express": "^5.0.2",
-    "@types/node": "^22.15.21",
-    "nodemon": "^3.1.9",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.8.3"
+    "nodemon": "^3.1.9"
   },
   "engines": {
     "node": ">=18.x <=20.x"
